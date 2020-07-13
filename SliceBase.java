@@ -22,7 +22,7 @@ public abstract class SliceBase extends Thread {
         this.zdim = zdim;
         flipbase = xdim * ydim * zdim - 1;
         ss = new ServerSocket(0, 0, InetAddress.getLoopbackAddress());
-        ss.setSoTimeout(10000);
+//        ss.setSoTimeout(10000);
         start();
     }
 

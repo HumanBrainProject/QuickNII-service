@@ -43,7 +43,7 @@ public class Serv {
 	
     public static void main(String[] args) throws Exception {
         ServerSocket catcher = new ServerSocket(0, 0, InetAddress.getLoopbackAddress());
-        catcher.setSoTimeout(10000);
+//        catcher.setSoTimeout(10000);
         System.out.println("Catcher: " + catcher.getLocalPort());
         final long start = System.currentTimeMillis();
 
@@ -106,6 +106,16 @@ public class Serv {
 
         System.out.println("" + (System.currentTimeMillis() - start) + ": Server ready.");
         System.out.flush();
+        
+///////////////////////////////////////////////////////////////////////////////////
+
+        if(args.length==1)        
+            Runtime.getRuntime().exec(String.format("wine QuickNII.exe %s %d %d %d %d %d", args[0], catcher.getLocalPort(), xthread.getLocalPort(), ythread.getLocalPort(), zthread.getLocalPort(), fthread.getLocalPort()));
+        else
+            Runtime.getRuntime().exec(String.format("QuickNII.exe %s %d %d %d %d %d", args[0], catcher.getLocalPort(), xthread.getLocalPort(), ythread.getLocalPort(), zthread.getLocalPort(), fthread.getLocalPort()));
+        
+///////////////////////////////////////////////////////////////////////////////////
+        
         final Socket s = catcher.accept();
         dos = new DataOutputStream(s.getOutputStream());
         dos.writeInt(baos.size());
