@@ -30,3 +30,23 @@ On Linux, the component works in a different way, as it is used for starting eve
     wine QuickNII.exe something.pack cport xport yport zport fport
 
 (and there is even a code path for doing it without `wine`, so I can test it on Windows - it is triggered by supplying any second command-line argument for the service)
+
+# Acknowledgements
+QuickNII is developed by the Neural Systems Laboratory at the Institute of Basic Medical Sciences, University of Oslo, Norway. QuickNII was developed with support from the EBRAINS infrastructure, and funding from the European Union’s Horizon 2020 Framework Programme for Research and Innovation under the Framework Partnership Agreement No. 650003 (HBP FPA).
+
+# Documentation
+https://quicknii.readthedocs.io
+
+# Developper
+Gergely Csucs
+
+# Authors
+ Maja A Puchades, Jan G Bjaalie. 
+
+# Licence
+- Main component: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+- Source code: MIT licence
+
+# Contact us
+Report issues here on github or email: support@ebrains.eu
+
